@@ -1,0 +1,299 @@
+/* Reset & body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #1e293b, #3b82f6);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #d1d5db;
+}
+
+/* Projects Section */
+#projects {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background-color: #1e293b;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  color: #38bdf8;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+/* Contact buttons */
+/* Contact Section */
+#contact {
+    max-width: 900px;
+    margin: 40px auto; 
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.contact-btn svg {
+    fill: #38bdf8;
+}
+
+.contact-btn:hover {
+    background-color: #3b82f6;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.contact-btn:hover svg {
+    fill: #fff;
+}
+/* Contact logos inside buttons */
+.contact-logo {
+    height: 24px;        
+    width: auto;        
+    margin-right: 8px;
+}
+
+/* Skills badges */
+#skills {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.skill-badge {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 8px 15px;
+  background-color: #3b82f6;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  background-color: #2563eb;
+}
+
+/* About Me Section */
+#about {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+}
+
+#about p {
+  flex: 1;
+  color: #d1d5db;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* About Me section: stack picture and text vertically */
+    #about .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    /* Project cards: full width with smaller padding */
+    .project-card {
+        padding: 15px;
+    }
+
+    /* Skills badges: smaller and stacked nicely */
+    #skills {
+        font-size: 0.9em;
+    }
+
+    .skill-badge {
+        padding: 6px 12px;
+        margin: 5px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    #projects h2,
+    #contact h2 {
+        font-size: 1.5em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+}
+
+/* Screenshot gallery wrapper with arrows */
+.screenshot-gallery {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Scrollable screenshot container */
+.screenshot-wrapper {
+    display: flex;
+    overflow-x: hidden; /* hide scrollbar */
+    gap: 10px;
+    flex: 1; /* take all space between arrows */
+}
+
+/* Screenshot styling */
+.project-screenshot {
+    height: 180px;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Arrow buttons */
+.scroll-btn {
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.scroll-btn:hover {
+    background-color: #2563eb;
+}
+
+.scroll-btn.left {
+    margin-right: 10px;
+}
+
+.scroll-btn.right {
+    margin-left: 10px;
+}
+
+/* Modal overlay */
+#image-modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+#image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close button */
+#close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#close-modal:hover {
+    color: #3b82f6;
+}
+
+
