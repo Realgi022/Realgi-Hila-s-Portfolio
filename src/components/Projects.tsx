@@ -1,25 +1,27 @@
 import { useState } from 'react'
 
 function Projects() {
+  const baseUrl = import.meta.env.BASE_URL
+
   const footballScreenshots = [
     {
-      src: '/images/FrontPageFootballBettingWebApp.png',
+      src: `${baseUrl}images/FrontPageFootballBettingWebApp.png`,
       title: 'Home Page',
     },
     {
-      src: '/images/AdminSide.png',
+      src: `${baseUrl}images/AdminSide.png`,
       title: 'Admin Dashboard',
     },
     {
-      src: '/images/AdminSideCreateMatch.png',
+      src: `${baseUrl}images/AdminSideCreateMatch.png`,
       title: 'Admin — Create Match',
     },
     {
-      src: '/images/UserSidePlaceBet.png',
+      src: `${baseUrl}images/UserSidePlaceBet.png`,
       title: 'User Betting Page',
     },
     {
-      src: '/images/UserSidePlaceBetPage.png',
+      src: `${baseUrl}images/UserSidePlaceBetPage.png`,
       title: 'Place Bet',
     },
   ]
@@ -146,7 +148,6 @@ function Projects() {
           {/* Screenshot Carousel */}
           <div className="p-4 md:p-6 border-b border-zinc-800">
 
-            {/* Screenshot title */}
             <div className="flex items-center justify-between mb-4">
               <p className="text-zinc-300 font-medium">
                 {footballScreenshots[currentImage].title}
@@ -157,7 +158,6 @@ function Projects() {
               </p>
             </div>
 
-            {/* Image */}
             <div
               className="relative overflow-hidden rounded-xl
                          border border-zinc-800 bg-zinc-950"
@@ -168,42 +168,44 @@ function Projects() {
                 className="w-full h-auto"
               />
 
-              {/* Left Arrow */}
+              {/* Previous */}
               <button
                 onClick={previousImage}
                 aria-label="Previous screenshot"
-                className="absolute left-4 top-1/2 -translate-y-1/2
-                           w-12 h-12 rounded-full
+                className="absolute left-2 md:left-4 top-1/2
+                           -translate-y-1/2
+                           w-10 h-10 md:w-12 md:h-12
+                           rounded-full
                            bg-black/70 hover:bg-black
                            backdrop-blur
                            border border-white/20
                            flex items-center justify-center
-                           text-white text-2xl
-                           cursor-pointer
-                           transition"
+                           text-white text-xl md:text-2xl
+                           cursor-pointer transition"
               >
                 ←
               </button>
 
-              {/* Right Arrow */}
+              {/* Next */}
               <button
                 onClick={nextImage}
                 aria-label="Next screenshot"
-                className="absolute right-4 top-1/2 -translate-y-1/2
-                           w-12 h-12 rounded-full
+                className="absolute right-2 md:right-4 top-1/2
+                           -translate-y-1/2
+                           w-10 h-10 md:w-12 md:h-12
+                           rounded-full
                            bg-black/70 hover:bg-black
                            backdrop-blur
                            border border-white/20
                            flex items-center justify-center
-                           text-white text-2xl
-                           cursor-pointer
-                           transition"
+                           text-white text-xl md:text-2xl
+                           cursor-pointer transition"
               >
                 →
               </button>
             </div>
 
-            {/* Navigation Dots */}
+            {/* Dots */}
             <div className="mt-5 flex justify-center gap-2">
               {footballScreenshots.map((screenshot, index) => (
                 <button
@@ -280,7 +282,6 @@ function Projects() {
 
             {/* Links */}
             <div className="mt-8 flex flex-wrap gap-6">
-
               <a
                 href="https://github.com/Realgi022/FootballBettingWebApp"
                 target="_blank"
@@ -300,8 +301,8 @@ function Projects() {
               >
                 Live Demo →
               </a>
-
             </div>
+
           </div>
         </div>
 

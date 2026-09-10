@@ -1,6 +1,11 @@
 function Contact() {
+  const baseUrl = import.meta.env.BASE_URL
+
   return (
-    <section id="contact" className="bg-zinc-950 py-28 text-white">
+    <section
+      id="contact"
+      className="scroll-mt-20 bg-zinc-950 py-28 text-white"
+    >
       <div className="max-w-6xl mx-auto px-6">
 
         <p className="text-blue-500 font-medium mb-3">
@@ -27,7 +32,7 @@ function Contact() {
                        px-5 py-3 rounded-lg transition"
           >
             <img
-              src="/images/Gmail.png"
+              src={`${baseUrl}images/Gmail.png`}
               alt="Email"
               className="w-6 h-6 object-contain"
             />
@@ -47,7 +52,7 @@ function Contact() {
                        px-5 py-3 rounded-lg transition"
           >
             <img
-              src="/images/LinkedIn.png"
+              src={`${baseUrl}images/LinkedIn.png`}
               alt="LinkedIn"
               className="w-6 h-6 object-contain"
             />
@@ -67,7 +72,7 @@ function Contact() {
                        px-5 py-3 rounded-lg transition"
           >
             <img
-              src="/images/GitHub.png"
+              src={`${baseUrl}images/GitHub.png`}
               alt="GitHub"
               className="w-6 h-6 object-contain"
             />

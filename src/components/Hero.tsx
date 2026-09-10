@@ -1,4 +1,6 @@
 function Hero() {
+  const baseUrl = import.meta.env.BASE_URL
+
   return (
     <section className="min-h-screen flex items-center bg-zinc-950 text-white">
       <div
@@ -29,7 +31,6 @@ function Hero() {
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
 
-            {/* Projects */}
             <a
               href="#projects"
               className="bg-blue-600 hover:bg-blue-500
@@ -39,9 +40,8 @@ function Hero() {
               View My Work
             </a>
 
-            {/* CV */}
             <a
-              href="/files/RealgiHila_CV.pdf"
+              href={`${baseUrl}files/RealgiHila_CV.pdf`}
               download="RealgiHila_CV.pdf"
               className="border border-zinc-700
                          hover:border-blue-500
@@ -52,7 +52,6 @@ function Hero() {
               Download CV ↓
             </a>
 
-            {/* GitHub */}
             <a
               href="https://github.com/Realgi022"
               target="_blank"
@@ -77,7 +76,7 @@ function Hero() {
                        shadow-2xl"
           >
             <img
-              src="/images/RealgiHilaPicture.jpeg"
+              src={`${baseUrl}images/RealgiHilaPicture.jpeg`}
               alt="Realgi Hila"
               className="w-full h-full object-cover"
             />
