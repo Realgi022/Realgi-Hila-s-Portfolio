@@ -70,15 +70,14 @@ function Hero() {
         {/* Profile Picture */}
         <div className="flex justify-center md:justify-end">
           <div
-            className="w-64 h-80 lg:w-72 lg:h-96
-                       rounded-2xl overflow-hidden
-                       border border-zinc-800
-                       shadow-2xl"
+            className="w-80 h-[420px] lg:w-[480px] lg:h-[570px]
+               rounded-2xl overflow-hidden
+               border border-zinc-800 shadow-2xl"
           >
             <img
-              src={`${baseUrl}images/RealgiHilaPicture.jpeg`}
+              src={`${baseUrl}images/Realgi-1134-3107.jpg`}
               alt="Realgi Hila"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </div>

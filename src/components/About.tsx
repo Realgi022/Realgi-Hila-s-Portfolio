@@ -16,7 +16,8 @@ function About() {
           <div className="text-zinc-400 text-lg leading-relaxed space-y-5">
             <p>
               I'm a Software Engineering student at Fontys University
-              of Applied Sciences in Eindhoven.
+              of Applied Sciences in Eindhoven. Born in 2006 in Albania, I moved to the Netherlands for
+              a better education and to pursue my passion for software development.
             </p>
 
             <p>
