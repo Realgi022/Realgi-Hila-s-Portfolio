@@ -22,10 +22,17 @@ function Hero() {
             Software Engineering Student
           </h2>
 
+          {/* Updated Description */}
           <p className="mt-8 max-w-2xl text-lg text-zinc-400 leading-relaxed">
-            I build full-stack applications using technologies such as
-            Java, C#, React and SQL, with a focus on clean architecture
-            and maintainable software.
+            I build full-stack applications using Java, C#, React and SQL,
+            with a focus on clean architecture, maintainable software
+            and automated testing.
+          </p>
+
+          <p className="mt-4 max-w-2xl text-lg text-zinc-400 leading-relaxed">
+            I also have hands-on experience with CI/CD pipelines,
+            Docker, Linux servers and automated deployment,
+            taking applications from development to production.
           </p>
 
           {/* Buttons */}
@@ -71,8 +78,8 @@ function Hero() {
         <div className="flex justify-center md:justify-end">
           <div
             className="w-80 h-[420px] lg:w-[480px] lg:h-[570px]
-               rounded-2xl overflow-hidden
-               border border-zinc-800 shadow-2xl"
+                       rounded-2xl overflow-hidden
+                       border border-zinc-800 shadow-2xl"
           >
             <img
               src={`${baseUrl}images/Realgi-1134-3107.jpg`}

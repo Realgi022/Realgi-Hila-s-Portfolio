@@ -3,6 +3,14 @@ import { useState } from 'react'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const navLinks = [
+    { label: 'About', href: '#about' },
+    { label: 'Journey', href: '#timeline' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ]
+
   const closeMenu = () => {
     setMenuOpen(false)
   }
@@ -28,40 +36,23 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#about"
-            className="text-zinc-400 hover:text-white transition"
-          >
-            About
-          </a>
-
-          <a
-            href="#skills"
-            className="text-zinc-400 hover:text-white transition"
-          >
-            Skills
-          </a>
-
-          <a
-            href="#projects"
-            className="text-zinc-400 hover:text-white transition"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#contact"
-            className="text-zinc-400 hover:text-white transition"
-          >
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-zinc-400 hover:text-white transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((previous) => !previous)}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
           className="md:hidden text-white
                      w-10 h-10 flex flex-col
                      items-center justify-center gap-1.5
@@ -89,9 +80,11 @@ function Navbar() {
 
       {/* Mobile Navigation */}
       <div
+        id="mobile-navigation"
+        inert={!menuOpen}
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen
-            ? 'max-h-80 border-t border-zinc-800'
+            ? 'max-h-96 border-t border-zinc-800'
             : 'max-h-0'
         }`}
       >
@@ -99,37 +92,16 @@ function Navbar() {
           className="px-6 py-6 flex flex-col gap-5
                      bg-zinc-950"
         >
-          <a
-            href="#about"
-            onClick={closeMenu}
-            className="text-zinc-300 hover:text-white transition"
-          >
-            About
-          </a>
-
-          <a
-            href="#skills"
-            onClick={closeMenu}
-            className="text-zinc-300 hover:text-white transition"
-          >
-            Skills
-          </a>
-
-          <a
-            href="#projects"
-            onClick={closeMenu}
-            className="text-zinc-300 hover:text-white transition"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#contact"
-            onClick={closeMenu}
-            className="text-zinc-300 hover:text-white transition"
-          >
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className="text-zinc-300 hover:text-white transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
